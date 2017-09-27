@@ -8,7 +8,7 @@ from scrapycmd.items import ScrapycmdItem
 
 class DmozSpider(scrapy.Spider):
     name = "dmoz"  # 命令行运行：scrapy crawl dmoz -o items.json
-    allowed_domains = ["dmoz.org"]
+    allowed_domains = ["importnew.com"]
     start_urls = [
         # "http://www.dmoz.org/Computers/Programming/Languages/Python/Books/",
         # "http://www.dmoz.org/Computers/Programming/Languages/Python/Resources/"

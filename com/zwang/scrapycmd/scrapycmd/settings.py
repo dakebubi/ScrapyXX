@@ -64,9 +64,13 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'scrapycmd.pipelines.ScrapycmdPipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'scrapycmd.spiders.my_image_pipeline.MyImagesPipeline':1
+   # 'scrapycmd.pipelines.ScrapycmdPipeline': 300,
+}
+IMAGES_STORE = 'E:/github/ScrapyXX/DOWNLOAD'
+# 90天的图片失效期限
+IMAGES_EXPIRES = 90
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
