@@ -21,6 +21,7 @@ class DmozSpider(scrapy.Spider):
     ]
 
     def parse(self, response):
+        # 直接下载后生成对应的文件
         # filename = response.url.split("/")[-2] + '.html'
         # with open(filename, 'wb') as f:
         #     f.write(response.body)

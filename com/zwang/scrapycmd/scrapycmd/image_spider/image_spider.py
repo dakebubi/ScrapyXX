@@ -3,6 +3,7 @@
 运行方式：
 1、cd至当前文件同目录下
 2、运行scrapy crawl image_spider -o items.json
+2、运行scrapy crawl image_spider -o 直接下载图片，存储路径由settings.py的IMAGES_STORE指定
 """
 import scrapy
 from scrapy.selector import HtmlXPathSelector
