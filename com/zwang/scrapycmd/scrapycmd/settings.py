@@ -11,8 +11,8 @@
 
 BOT_NAME = 'scrapycmd'
 
-SPIDER_MODULES = ['scrapycmd.spiders']
-NEWSPIDER_MODULE = 'scrapycmd.spiders'
+SPIDER_MODULES = ['scrapycmd.image_spider']
+NEWSPIDER_MODULE = 'scrapycmd.image_spider'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
@@ -65,8 +65,8 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'scrapycmd.spiders.my_image_pipeline.MyImagesPipeline':1
-   # 'scrapycmd.pipelines.ScrapycmdPipeline': 300,
+   'scrapycmd.pipelines.MyImagesPipeline':1
+   # 'scrapycmd.pipelines.ScrapycmdPipeline': 1
 }
 IMAGES_STORE = 'E:/github/ScrapyXX/DOWNLOAD'
 # 90天的图片失效期限

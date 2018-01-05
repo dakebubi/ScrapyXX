@@ -1,4 +1,9 @@
 # -*- coding: utf-8 -*-
+"""
+运行方式：
+1、cd至当前文件同目录下
+2、运行scrapy crawl image_spider -o items.json
+"""
 import scrapy
 from scrapy.selector import HtmlXPathSelector
 
