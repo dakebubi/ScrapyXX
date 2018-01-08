@@ -27,7 +27,8 @@ class DmozSpider(scrapy.Spider):
         #     f.write(response.body)
 
 
-        logging.warning("This is a warning")
+        # logging.warning("This is a warning")
+        self.logger.info('A response from %s just arrived!', response.url)
         for sel in response.xpath('//ul/li'):
             scrapycmdItem = ScrapycmdItem();
             scrapycmdItem['title'] = sel.xpath('a/text()').extract()  # 打印的是unicode
