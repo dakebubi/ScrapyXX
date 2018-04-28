@@ -2,7 +2,7 @@ import xlwt
 
 
 def do_pipelines_xls(self, medicallist):
-    filename = '西药药品价格数据.xls'
+    filename = './output/西药药品价格数据.xls'
     self.log.info('准备保存数据到excel中...')
     book = xlwt.Workbook(encoding='utf8', style_compression=0)
     sheet = book.add_sheet('西药药品价格')

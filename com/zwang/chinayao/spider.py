@@ -1,9 +1,10 @@
 import random
 import time
+import urllib.request
 
 from bs4 import BeautifulSoup
 
-from com.zwang.chinayao.Item import Item
+from com.zwang.chinayao.items import Item
 
 
 def doSpider(self, names):
@@ -11,6 +12,7 @@ def doSpider(self, names):
     for name in names:
         if name != '':
             self.log.info(u'尝试爬取 %s 信息' % name)
+            name = urllib.request.quote(name)
             url = 'http://www.china-yao.com/?act=search&typeid=1&keyword=' + name
             htmlcontent = self.getresponsecontent(url)
             soup = BeautifulSoup(htmlcontent, 'lxml')

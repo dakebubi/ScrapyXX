@@ -1,9 +1,9 @@
 import time
 import urllib.request
 
-from com.zwang.chinayao.MyLog import MyLog
-from com.zwang.chinayao.Spider import doSpider
+from com.zwang.chinayao.mylog import MyLog
 from com.zwang.chinayao.pipelines import do_pipelines_xls
+from com.zwang.chinayao.spider import doSpider
 
 
 class GetInfor(object):
@@ -11,7 +11,7 @@ class GetInfor(object):
         self.log = MyLog()
         self.starttime = time.time()
         self.log.info(u'爬虫程序开始运行，时间： %s' % time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(self.starttime)))
-        self.medicallist = self.getmedicallist('drugName.txt')
+        self.medicallist = self.getmedicallist('./input/drugName.txt')
         self.items = self.spider(self.medicallist)
         self.pipelines_xls(self.items)
         self.endtime = time.time()
